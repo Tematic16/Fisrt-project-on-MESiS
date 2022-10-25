@@ -1,0 +1,81 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: palevioletred;
+}
+.rek{
+    background: url(reklama12.jpg) no-repeat;
+    position: absolute;
+    top:3px;
+    left:53px;
+    width:auto;
+    height:auto;
+    z-index: 3;
+}
+li {
+    list-style: none;
+    cursor: pointer;
+}
+.kat1{
+    position:absolute;
+    top:17%;
+    left:10%;
+}
+.sait {
+    background-color: white;
+    width: 160px;
+    height: 40px;
+    border-radius: 12px;
+    margin: left;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    text-decoration-color: white;
+    background-color: black;
+}
+
+.Forma {
+    display: flex;
+}
+
+.Forma form {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu ul li {
+    margin: 15px;
+}
+
+.menu ul form {
+    margin: 15px;
+}
+
+body {
+    background: linear-gradient(-45deg, #B22222, #7B68EE, #FF1493, #FF00FF);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
