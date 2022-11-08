@@ -18,6 +18,7 @@ li {
     cursor:pointer;
     background-color: white;
     border-radius: 12px;
+    text-align: center;
 }
 
 .menu ul {

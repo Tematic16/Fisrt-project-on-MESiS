@@ -27,10 +27,11 @@ li {
 
 .sait {
     background-color: white;
-    width: 160px;
-    height: 40px;
+    width:auto;
+    height:auto;
     border-radius: 12px;
     margin: left;
+    text-align: center;
 }
 
 .menu ul {
