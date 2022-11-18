@@ -96,41 +96,31 @@
 //        echo "Значение ", $value, "<br>";
 //    }
 //}
-function rasn($arg1, $arg2) {
-    return $arg1 - $arg2;
-}
-function summa($arg1, $arg2) {
-    return $arg1 + $arg2;
-}
-function umn($arg1, $arg2) {
-    return $arg1 * $arg2;
-}
-function splitt($arg1, $arg2) {
-    if ($arg2 == 0){
-        return "Нельзя на 0 делить!";
-    }
-    return $arg1 / $arg2;
-}
-function math($arg1, $arg2, $operation){
-    switch ($operation){
-        case "Сложение":
-            echo summa($arg1,$arg2);
-        break;
-        case "Деление":
-            echo splitt($arg1,$arg2);
-        break;
-        case "Вычитание":
-            echo rasn($arg1,$arg2);
-        break;
-        case "Умножение":
-            echo umn($arg1,$arg2);
-        break;
-        default:
-            echo "Что то пошло не так!";
-    }
-}
-echo " Оператор switch " , math(10, 10, "Вычитание");
 
 
+
+$conn=mysqli_connect("localhost", "root", "", "frontend");
+if ($conn){
+    echo "Подключение в БД есть";
+    $login=$_GET['login'];
+    $password=$_GET['password'];
+    if ($login && $password){
+        echo "YES";
+        $sql="SELECT * FROM users WHERE login='{$login}' and password='{$password}'";
+        $query=mysqli_query($conn, $sql);
+        $result=mysqli_fetch_assoc($query);
+        var_dump($result);
+        foreach($result as $column => $value){
+            if($column =="full_name"){
+                echo "welcome, ",$value;
+            }
+            else {
+                echo "NO";
+            }
+        }
+
+    
+}
+}
 
 ?>
